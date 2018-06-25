@@ -18,7 +18,7 @@
         android:digits="0123456789"
         android:ems="10"
         android:inputType="number"
-        android:maxLength="6" />
+        android:maxLength="15" />
 
     <TextView
         android:id="@+id/amountTextView"

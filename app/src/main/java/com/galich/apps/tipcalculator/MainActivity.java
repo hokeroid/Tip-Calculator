@@ -80,6 +80,11 @@ public class MainActivity extends Activity {
     private final TextWatcher amountEditTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
             try{
                 billAmount = Double.parseDouble(s.toString()) / 100.0;
                 amountTextView.setText(currencyFormat.format(billAmount));
@@ -89,11 +94,6 @@ public class MainActivity extends Activity {
             }
 
             calculate();
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
         }
 
         @Override
